@@ -25,7 +25,7 @@ const Index = () => {
         </div>
         
         <h1 className="text-2xl font-bold text-blue-600">Welcome to Blue Pay Payment System</h1>
-        <p className="text-xl text-gray-600">Activate your account and start using Blue Pay today!</p>
+        <p className="text-xl text-gray-600">Activate your account and start using BluePay2025 today!</p>
         
         <Button 
           onClick={() => navigate('/activate')}
