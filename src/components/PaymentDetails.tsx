@@ -9,10 +9,10 @@ import PaymentConfirmation from './PaymentConfirmation';
 const PaymentDetails: React.FC = () => {
   const navigate = useNavigate();
   const [file, setFile] = useState<File | null>(null);
-  const [timeLeft, setTimeLeft] = useState(300); // 5 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(300); // 5 minutes
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [showOpayAlert, setShowOpayAlert] = useState(true); // Show alert on load
+  const [showOpayAlert, setShowOpayAlert] = useState(true);
 
   useEffect(() => {
     if (timeLeft > 0) {
@@ -44,7 +44,6 @@ const PaymentDetails: React.FC = () => {
 
   const handlePayment = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!file) {
       toast.error("Please upload your payment receipt");
       return;
@@ -66,19 +65,21 @@ const PaymentDetails: React.FC = () => {
       {showOpayAlert && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg p-6 w-full max-w-sm text-center shadow-lg">
-            <div className="mb-4">
-              <div className="text-green-600 text-4xl">⏺️</div>
-              <h2 className="text-xl font-bold text-red-600">Opay Service Down</h2>
-              <p className="text-gray-700 mt-2">
-                Please do not use Opay bank for payments at this time.
-              </p>
-              <div className="mt-4 bg-red-100 text-red-800 p-3 rounded text-sm">
-                The Opay bank service is currently experiencing issues. Please use other supported banks for your payment.
-              </div>
+            <img
+              src="https://i.ibb.co/qLVCfHVK/icon.jpg"
+              alt="Logo"
+              className="mx-auto mb-4 w-14 h-14 rounded-full"
+            />
+            <h2 className="text-xl font-bold text-red-600">Opay Service Down</h2>
+            <p className="text-gray-700 mt-2">
+              Please do not use Opay bank for payments at this time.
+            </p>
+            <div className="mt-4 bg-red-100 text-red-800 p-3 rounded text-sm">
+              The Opay bank service is currently experiencing issues. Please use other supported banks for your payment.
             </div>
             <Button
               onClick={() => setShowOpayAlert(false)}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white"
             >
               I Understand
             </Button>
@@ -182,4 +183,4 @@ const PaymentDetails: React.FC = () => {
 };
 
 export default PaymentDetails;
-               
+    
