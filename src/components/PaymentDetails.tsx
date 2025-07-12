@@ -92,7 +92,7 @@ const PaymentDetails: React.FC = () => {
       <div className="w-full max-w-md bg-white rounded-lg p-6 shadow-lg">
         <h2 className="text-2xl font-bold mb-2">Make Payment to Complete Activation</h2>
         <p className="text-gray-500 mb-6">
-          Please make a payment of 20,000 naira to complete your activation
+          Please make a payment of 18,450 naira to complete your activation
         </p>
 
         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
@@ -105,7 +105,7 @@ const PaymentDetails: React.FC = () => {
               </svg>
             </div>
             <p className="ml-3 text-blue-700">
-              A settlement fee of NGN 20,000.00 is required to authorize withdrawals. This fee will be credited back with your withdrawal once authorized.
+              A settlement fee of NGN 18,450.00 is required to authorize withdrawals. This fee will be credited back with your withdrawal once authorized.
             </p>
           </div>
           <div className="mt-2 text-right">
@@ -123,9 +123,9 @@ const PaymentDetails: React.FC = () => {
           <div>
             <label className="block text-sm font-medium mb-1">Account Number</label>
             <div className="flex">
-              <Input value="1035319866" readOnly className="bg-gray-50" />
+              <Input value="6957666738" readOnly className="bg-gray-50" />
               <Button variant="outline" className="ml-2 px-2" onClick={() => {
-                navigator.clipboard.writeText("1035319866");
+                navigator.clipboard.writeText("6957666738");
                 toast.success("Account number copied to clipboard");
               }}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -138,17 +138,17 @@ const PaymentDetails: React.FC = () => {
 
           <div>
             <label className="block text-sm font-medium mb-1">Bank</label>
-            <Input value="Carbon" readOnly className="bg-gray-50" />
+            <Input value="MONIEPOINT MFB" readOnly className="bg-gray-50" />
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-1">Account Name</label>
-            <Input value="Sunday chinemerem" readOnly className="bg-gray-50" />
+            <Input value="SUNDAY LIBERTY CHINEMEREM" readOnly className="bg-gray-50" />
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-1">Amount</label>
-            <Input value="20,000 naira" readOnly className="bg-gray-50" />
+            <Input value="18,450 naira" readOnly className="bg-gray-50" />
           </div>
 
           <div>
